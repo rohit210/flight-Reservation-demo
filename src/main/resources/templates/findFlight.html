@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>find Flight </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<form class="needs-validation" th:action="@{/findFlights}" method="post" >
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationTooltip01">From</label>
+            <input type="text" class="form-control"  placeholder="from" name="from" />
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationTooltip02">To</label>
+            <input type="text" class="form-control"  placeholder="to" name="to" 	/>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationTooltip02">Departure Date</label>
+            <input type=" text" class="form-control"  placeholder="departure date" name="departureDate"/>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">search</button>
+</form>
+</body>
+</html>

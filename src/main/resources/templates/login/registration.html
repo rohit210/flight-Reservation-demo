@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<h1>User Registration</h1>
+<form th:action="@{/registerUser}" method="post" th:object="${user}">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">First Name</label>
+            <input type="text" class="form-control" placeholder="firstname" th:field="*{firstName}">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Last Name</label>
+            <input type="text" class="form-control"  placeholder="lastName" th:field="*{lastName}">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control"  placeholder="Email" th:field="*{email}">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control"  placeholder="Password" th:field="*{password}">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">confirm Password</label>
+            <input type="passworda" class="form-control" id="inputPassword4" name="confirmPassword"placeholder="ConfirmPassword">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+</body>
+</html>

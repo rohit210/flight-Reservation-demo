@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<table class="table table-sm table-dark">
+    <thead>
+    <tr>
+        <th scope="col">flight name</th>
+        <th scope="col">From</th>
+        <th scope="col">to</th>
+        <th scope="col">departureDate</th>
+        <th scope="col">view flights</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="flightdetails:${flight}">
+        <td  th:text="${flightdetails.operatingAirlines}"></td>
+        <td th:text="${flightdetails.departureCity}"></td>
+        <td th:text="${flightdetails.arrivalCity}"></td>
+        <td th:text="${flightdetails.estimatedDepartureTime}"></td>
+        <td>
+            <div class="col-md-4">
+                <a th:href="@{'/showCompleteReservation/'+${flightdetails.id}}" class="btn btn-info" role="button">Select</a>
+
+<!--                <a th:href="@{'/showCompleteReservation/'+${flightdetails.id}"> <button type="button" class="btn btn-danger ">select</button></a>-->
+            </div>
+        </td>
+    </tr>
+
+
+    </tbody>
+</table>
+</body>
+</html>
